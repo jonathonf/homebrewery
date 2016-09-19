@@ -3,13 +3,14 @@
   "description": "Create authentic looking D&D homebrews using only markdown",
   "version": "2.3.0",
   "scripts": {
-    "build": "node_modules/.bin/gulp fresh",
+    "build": "node_modules/.bin/gulp prod",
     "watch": "node_modules/.bin/gulp",
-    "postinstall": "gulp prod",
+    "libs": "node_modules/.bin/gulp fresh",
+    "postinstall": "npm run build",
     "start": "node server.js"
   },
   "author": "stolksdorf",
-  "license": "MIT",
+  "license": "BSD-2-Clause",
   "dependencies": {
     "app-module-path": "^1.0.4",
     "basic-auth": "^1.0.3",
@@ -29,7 +30,7 @@
     "react-dom": "^15.0.2",
     "shortid": "^2.2.4",
     "striptags": "^2.1.1",
-    "superagent": "^1.6.1",
+    "superagent": "^2.2.0",
     "vitreum": "^3.2.1"
   }
 }
